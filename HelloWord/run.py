@@ -1,9 +1,11 @@
 from flask import (Flask, render_template)
+import time
 app = Flask(__name__)
 
 
 @app.route("/hello")
 def welcome():
+    time.sleep(5)
     return render_template("welcome.html")
 
 
